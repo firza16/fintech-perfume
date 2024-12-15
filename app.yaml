@@ -1,0 +1,23 @@
+runtime: php81
+
+handlers:
+  # File PHP (dynamic requests)
+  - url: /.*
+    script: auto
+
+  # File statis untuk CSS
+  - url: /css
+    static_dir: css
+
+  # File statis untuk JavaScript
+  - url: /js
+    static_dir: js
+
+  # File statis untuk gambar
+  - url: /img
+    static_dir: img
+
+  # Halaman utama
+  - url: /
+    static_files: index.html
+    upload: index.html
